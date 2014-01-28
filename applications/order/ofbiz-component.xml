@@ -64,5 +64,18 @@ under the License.
         location="webapp/ordermgr"
         base-permission="OFBTOOLS,ORDERMGR"
         mount-point="/ordermgr"/>
+<webapp name="purchasemgr"
+        title="PURCHASE MANAGER"
+        server="default-server"
+        location="webapp/purchasemgr"
+        base-permission="OFBTOOLS,ORDERMGR"
+        mount-point="/purchasemgr"/>
+
+    <webapp name="salesmgr"
+        title="SALES MANAGER"
+        server="default-server"
+        location="webapp/salesmgr"
+        base-permission="OFBTOOLS,ORDERMGR"
+        mount-point="/salesmgr"/>
 </ofbiz-component>
 
