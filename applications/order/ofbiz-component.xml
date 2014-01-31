@@ -65,14 +65,14 @@ under the License.
         base-permission="OFBTOOLS,ORDERMGR"
         mount-point="/ordermgr"/>
 <webapp name="purchasemgr"
-        title="PURCHASE MANAGER"
+        title="Purchase Manager"
         server="default-server"
         location="webapp/purchasemgr"
         base-permission="OFBTOOLS,ORDERMGR"
         mount-point="/purchasemgr"/>
 
     <webapp name="salesmgr"
-        title="SALES MANAGER"
+        title="Sales Manager"
         server="default-server"
         location="webapp/salesmgr"
         base-permission="OFBTOOLS,ORDERMGR"

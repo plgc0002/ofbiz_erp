@@ -1,6 +1,8 @@
 *.class
-
+*entityengine.xml
 # Package Files #
 *.jar
 *.war
 *.ear
+
+*.log

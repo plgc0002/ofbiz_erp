@@ -77,10 +77,10 @@ table {
 General Styles
 ***********************************************/
 body {
-    background:url(../images/bg.jpg) top left repeat-y;
+    background:url(../images/bg1.jpg) top left repeat-y;
     color: #000;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
-    font-size:.65em;
+    font-family: Trebuchet MS;
+    font-size:.75em;
     line-height:1.2em;
 }
 
@@ -215,7 +215,7 @@ body > #wrap {height: auto; min-height: 100%;}
 }
 
 #header {
-    background:url(../images/wrapper-bg.jpg) top left repeat-x;
+    background:url(../images/header-erp.jpg) no-repeat;
     height:120px;
     padding:15px 0 0px 0;
 }
@@ -444,8 +444,8 @@ Header
 ***********************************************/
 #controls {
     position:absolute;
-    top:15px;
-    left:445px;
+    top:20px;
+    left:815px;
     text-align:left;
     min-width:440px;
     width:expression(document.body.clientWidth < 442? "440px" : document.body.clientWidth > 1982? "1980px" : "auto");
@@ -625,12 +625,12 @@ Header
 App Navigation
 ***********************************************/
 #app-navigation h2 {
-    color:#fff;
+    color:#ffff;
     font-weight:bold;
     text-transform:uppercase;
-    font-size:25px;
+    font-size:22px;
     margin-bottom:0px;
-    margin: 0px 0 0 20px;
+    margin: 18px 0 0 20px;
     padding: 0;
 }
 

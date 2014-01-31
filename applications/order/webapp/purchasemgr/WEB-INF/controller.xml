@@ -780,7 +780,7 @@ under the License.
 
     <!--
         Quick Finalize Order reuses the ecommerce checkoutoptions widget and template. We need to
-        translate the controller requests here for use by ordermgr.  Note that the main entry point on submit is "checkout".
+        translate the controller requests here for use by purchasemgr.  Note that the main entry point on submit is "checkout".
     -->
     <request-map uri="quickcheckout">
         <security https="true" auth="true"/>
@@ -1158,7 +1158,7 @@ under the License.
     
     <request-map uri="checkReportBy">
         <security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/CheckReportBy.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/CheckReportBy.groovy"/>
         <response name="dayPDF" type="request" value="SalesReport.pdf"/>
         <response name="weekPDF" type="request" value="SalesReportWeek.pdf"/>
         <response name="monthPDF" type="request" value="SalesReportMonth.pdf"/>
@@ -1174,51 +1174,51 @@ under the License.
         </response>
     </request-map>
     <request-map uri="SalesReport.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportPDF"/>
     </request-map>
     <request-map uri="SalesReportWeek.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportWeekPDF"/>
     </request-map>
     <request-map uri="SalesReportMonth.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportMonthPDF"/>
     </request-map>
     <request-map uri="SalesReport.excel"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportExcel"/>
     </request-map>
     <request-map uri="SalesReportWeek.excel"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportWeekExcel"/>
     </request-map>
     <request-map uri="SalesReportMonth.excel"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportMonthExcel"/>
     </request-map>
     <request-map uri="SalesReport.html"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportHTML"/>
     </request-map>
     <request-map uri="SalesReportWeek.html"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportWeekHTML"/>
     </request-map>
     <request-map uri="SalesReportMonth.html"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/SalesReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/SalesReport.groovy"/>
         <response name="success" type="view" value="SalesOrderReportMonthHTML"/>
     </request-map>
     <request-map uri="NetBeforeOverheadReport.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/NetBeforeOverheadReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/NetBeforeOverheadReport.groovy"/>
         <response name="success" type="view" value="NetBeforeOverheadOrderReport"/>
     </request-map>
     <request-map uri="ProductDemandReport.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/ProductDemandReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/ProductDemandReport.groovy"/>
         <response name="success" type="view" value="ProductDemandOrderReport"/>
     </request-map>
     <request-map uri="ProductContributionReport.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/ProductContributionReport.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/ProductContributionReport.groovy"/>
         <response name="success" type="view" value="ProductDemandOrderReport"/>
     </request-map>
 
@@ -1226,7 +1226,7 @@ under the License.
         <response name="success" type="view" value="OrderByReferrerReport"/>
     </request-map>
     <request-map uri="OrdersByChannel.pdf"><security https="true" auth="true"/>
-        <event type="groovy" path="component://order/webapp/ordermgr/WEB-INF/actions/reports/OrderByChannel.groovy"/>
+        <event type="groovy" path="component://order/webapp/purchasemgr/WEB-INF/actions/reports/OrderByChannel.groovy"/>
         <response name="success" type="view" value="OrdersByChannelReport"/>
     </request-map>
     <request-map uri="OrderDiscountCode.pdf">
@@ -1949,7 +1949,7 @@ under the License.
     </request-map>
 
 
-    <view-map name="orderreportlist" type="screen" page="component://order/widget/ordermgr/OrderReportScreens.xml#OrderReportList"/>
+    <view-map name="orderreportlist" type="screen" page="component://order/widget/purchasemgr/OrderReportScreens.xml#OrderReportList"/>
     <view-map name="orderreportjasper" type="jasperreportspdf" page="/reports/orderreport.xml" content-type="application/pdf" encoding="none"/>
     <view-map name="orderitemreportjasper" type="jasperreportspdf" page="/reports/orderitemreport.xml" content-type="application/pdf" encoding="none"/>
     -->
@@ -1959,142 +1959,142 @@ under the License.
     <!-- View Mappings -->
     <view-map name="LookupProductCategory" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupProductCategory"/>
 
-    <view-map name="main" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#Main"/>
+    <view-map name="main" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#Main"/>
 
-    <view-map name="orderstats" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderStats"/>
-    <view-map name="findorders" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderFindOrder"/>
-    <view-map name="OrderDeliveryScheduleInfo" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderDeliveryScheduleInfo"/>
-    <view-map name="orderview" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderHeaderView"/>
-    <view-map name="OrderHistory" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderHistory"/>
-    <view-map name="orderlist" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderHeaderListView"/>
-    <view-map name="editorderitems" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderItemEdit"/>
-    <view-map name="createnewnote" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderNewNote"/>
-    <view-map name="receivepayment" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderReceivePayment"/>
-    <view-map name="viewimage" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#ViewImage"/>
-    <view-map name="ListOrderTerms" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#ListOrderTerms"/>
+    <view-map name="orderstats" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderStats"/>
+    <view-map name="findorders" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderFindOrder"/>
+    <view-map name="OrderDeliveryScheduleInfo" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderDeliveryScheduleInfo"/>
+    <view-map name="orderview" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderHeaderView"/>
+    <view-map name="OrderHistory" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderHistory"/>
+    <view-map name="orderlist" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderHeaderListView"/>
+    <view-map name="editorderitems" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderItemEdit"/>
+    <view-map name="createnewnote" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderNewNote"/>
+    <view-map name="receivepayment" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderReceivePayment"/>
+    <view-map name="viewimage" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#ViewImage"/>
+    <view-map name="ListOrderTerms" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#ListOrderTerms"/>
 
-    <view-map name="survey" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#survey"/>
-    <view-map name="showcart" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#ShowCart"/>
-    <view-map name="checkinits" type="screen" page="component://order/widget/ordermgr/OrderEntryScreens.xml#CheckInits"/>
-    <view-map name="orderagreements" type="screen" page="component://order/widget/ordermgr/OrderEntryScreens.xml#OrderAgreements"/>
-    <view-map name="viewshoppinglists" type="screen" page="component://order/widget/ordermgr/OrderEntryScreens.xml#ViewShoppingLists"/>
-    <view-map name="addfromshoppinglist" type="screen" page="component://order/widget/ordermgr/OrderEntryScreens.xml#AddFromShoppingList"/>
-    <view-map name="keywordsearch" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#keywordsearch"/>
-    <view-map name="advancedsearch" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#advancedsearch"/>
+    <view-map name="survey" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#survey"/>
+    <view-map name="showcart" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#ShowCart"/>
+    <view-map name="checkinits" type="screen" page="component://order/widget/purchasemgr/OrderEntryScreens.xml#CheckInits"/>
+    <view-map name="orderagreements" type="screen" page="component://order/widget/purchasemgr/OrderEntryScreens.xml#OrderAgreements"/>
+    <view-map name="viewshoppinglists" type="screen" page="component://order/widget/purchasemgr/OrderEntryScreens.xml#ViewShoppingLists"/>
+    <view-map name="addfromshoppinglist" type="screen" page="component://order/widget/purchasemgr/OrderEntryScreens.xml#AddFromShoppingList"/>
+    <view-map name="keywordsearch" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#keywordsearch"/>
+    <view-map name="advancedsearch" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#advancedsearch"/>
 
-    <view-map name="quickcheckout" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#quickFinalizeOrder"/>
-    <view-map name="checkoutshippingaddress" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#checkoutshippingaddress"/>
+    <view-map name="quickcheckout" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#quickFinalizeOrder"/>
+    <view-map name="checkoutshippingaddress" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#checkoutshippingaddress"/>
     <view-map name="editcontactmech" type="screen" page="component://party/widget/partymgr/PartyScreens.xml#editcontactmech"/>
     <view-map name="editcreditcard" type="screen" page="component://party/widget/partymgr/PaymentMethodScreens.xml#editcreditcard"/>
     <view-map name="editeftaccount" type="screen" page="component://party/widget/partymgr/PaymentMethodScreens.xml#editeftaccount"/>
 
-    <view-map name="category" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#category"/>
-    <view-map name="product" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#product"/>
-    <view-map name="compareProducts" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#compareProducts"/>
-    <view-map name="quickadd" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#quickadd"/>
-    <view-map name="AddGiftCertificate" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#AddGiftCertificate"/>
+    <view-map name="category" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#category"/>
+    <view-map name="product" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#product"/>
+    <view-map name="compareProducts" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#compareProducts"/>
+    <view-map name="quickadd" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#quickadd"/>
+    <view-map name="AddGiftCertificate" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#AddGiftCertificate"/>
 
-    <view-map name="custsetting" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#CustSettings"/>
-    <view-map name="shipsetting" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#ShipSettings"/>
-    <view-map name="EditShipAddress" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#EditShipAddress"/>
-    <view-map name="SetItemShipGroups" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#SetItemShipGroups"/>
-    <view-map name="optionsetting" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#OptionSettings"/>
-    <view-map name="billsetting" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#BillSettings"/>
-    <view-map name="confirm" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#ConfirmOrder"/>
-    <view-map name="ordercomplete" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#OrderHeaderView"/>
-    <view-map name="orderTerm" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#OrderTerms"/>
-    <view-map name="setAdditionalParty" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#SetAdditionalParty"/>
+    <view-map name="custsetting" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#CustSettings"/>
+    <view-map name="shipsetting" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#ShipSettings"/>
+    <view-map name="EditShipAddress" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#EditShipAddress"/>
+    <view-map name="SetItemShipGroups" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#SetItemShipGroups"/>
+    <view-map name="optionsetting" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#OptionSettings"/>
+    <view-map name="billsetting" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#BillSettings"/>
+    <view-map name="confirm" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#ConfirmOrder"/>
+    <view-map name="ordercomplete" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#OrderHeaderView"/>
+    <view-map name="orderTerm" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#OrderTerms"/>
+    <view-map name="setAdditionalParty" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#SetAdditionalParty"/>
 
-    <view-map name="showAllPromotions" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#showAllPromotions"/>
-    <view-map name="showPromotionDetails" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#showPromotionDetails"/>
+    <view-map name="showAllPromotions" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#showAllPromotions"/>
+    <view-map name="showPromotionDetails" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#showPromotionDetails"/>
 
-    <view-map name="findreturn" type="screen" page="component://order/widget/ordermgr/OrderReturnScreens.xml#OrderFindReturn"/>
-    <view-map name="returnlist" type="screen" page="component://order/widget/ordermgr/OrderReturnScreens.xml#OrderReturnList"/>
-    <view-map name="returnhead" type="screen" page="component://order/widget/ordermgr/OrderReturnScreens.xml#OrderReturnHeader"/>
-    <view-map name="returnitems" type="screen" page="component://order/widget/ordermgr/OrderReturnScreens.xml#OrderReturnItems"/>
-    <view-map name="quickReturn" type="screen" page="component://order/widget/ordermgr/OrderReturnScreens.xml#OrderQuickReturn"/>
+    <view-map name="findreturn" type="screen" page="component://order/widget/purchasemgr/OrderReturnScreens.xml#OrderFindReturn"/>
+    <view-map name="returnlist" type="screen" page="component://order/widget/purchasemgr/OrderReturnScreens.xml#OrderReturnList"/>
+    <view-map name="returnhead" type="screen" page="component://order/widget/purchasemgr/OrderReturnScreens.xml#OrderReturnHeader"/>
+    <view-map name="returnitems" type="screen" page="component://order/widget/purchasemgr/OrderReturnScreens.xml#OrderReturnItems"/>
+    <view-map name="quickReturn" type="screen" page="component://order/widget/purchasemgr/OrderReturnScreens.xml#OrderQuickReturn"/>
 
-    <view-map name="paysetup" type="screen" page="component://order/widget/ordermgr/OrderSetupScreens.xml#OrderPaymentSetup"/>
+    <view-map name="paysetup" type="screen" page="component://order/widget/purchasemgr/OrderSetupScreens.xml#OrderPaymentSetup"/>
 
-    <view-map name="OrderPurchaseReportOptions" type="screen" page="component://order/widget/ordermgr/ReportScreens.xml#OrderPurchaseReportOptions"/>
-    <view-map name="OrderPurchaseReportPayment" type="screenfop" page="component://order/widget/ordermgr/ReportScreens.xml#OrderPurchaseReportPayment" content-type="application/pdf" encoding="none"/>
-    <view-map name="OrderPurchaseReportProduct" type="screenfop" page="component://order/widget/ordermgr/ReportScreens.xml#OrderPurchaseReportProduct" content-type="application/pdf" encoding="none"/>
-    <view-map name="SalesByStoreReport" type="screenfop" page="component://order/widget/ordermgr/ReportScreens.xml#SalesByStoreReport" content-type="application/pdf" encoding="none"/>
-    <view-map name="OpenOrderItemsReport" type="screen" page="component://order/widget/ordermgr/ReportScreens.xml#OpenOrderItemsReport"/>
-    <view-map name="PurchasesByOrganizationReport" type="screenfop" page="component://order/widget/ordermgr/ReportScreens.xml#PurchasesByOrganizationReport" content-type="application/pdf" encoding="none"/>
+    <view-map name="OrderPurchaseReportOptions" type="screen" page="component://order/widget/purchasemgr/ReportScreens.xml#OrderPurchaseReportOptions"/>
+    <view-map name="OrderPurchaseReportPayment" type="screenfop" page="component://order/widget/purchasemgr/ReportScreens.xml#OrderPurchaseReportPayment" content-type="application/pdf" encoding="none"/>
+    <view-map name="OrderPurchaseReportProduct" type="screenfop" page="component://order/widget/purchasemgr/ReportScreens.xml#OrderPurchaseReportProduct" content-type="application/pdf" encoding="none"/>
+    <view-map name="SalesByStoreReport" type="screenfop" page="component://order/widget/purchasemgr/ReportScreens.xml#SalesByStoreReport" content-type="application/pdf" encoding="none"/>
+    <view-map name="OpenOrderItemsReport" type="screen" page="component://order/widget/purchasemgr/ReportScreens.xml#OpenOrderItemsReport"/>
+    <view-map name="PurchasesByOrganizationReport" type="screenfop" page="component://order/widget/purchasemgr/ReportScreens.xml#PurchasesByOrganizationReport" content-type="application/pdf" encoding="none"/>
 
-    <view-map name="SalesOrderReportPDF" type="birt" page="component://order/webapp/ordermgr/reports/SalesReport.rptdesign" content-type="application/pdf"/>
-    <view-map name="SalesOrderReportWeekPDF" type="birt" page="component://order/webapp/ordermgr/reports/SalesReportWeek.rptdesign" content-type="application/pdf"/>
-    <view-map name="SalesOrderReportMonthPDF" type="birt" page="component://order/webapp/ordermgr/reports/SalesReportMonth.rptdesign" content-type="application/pdf"/>
-    <view-map name="SalesOrderReportExcel" type="birt" page="component://order/webapp/ordermgr/reports/SalesReport.rptdesign" content-type="application/vnd.ms-excel"/>
-    <view-map name="SalesOrderReportWeekExcel" type="birt" page="component://order/webapp/ordermgr/reports/SalesReportWeek.rptdesign" content-type="application/vnd.ms-excel"/>
-    <view-map name="SalesOrderReportMonthExcel" type="birt" page="component://order/webapp/ordermgr/reports/SalesReportMonth.rptdesign" content-type="application/vnd.ms-excel"/>
-    <view-map name="SalesOrderReportHTML" type="birt" page="component://order/webapp/ordermgr/reports/SalesReport.rptdesign" content-type="text/html"/>
-    <view-map name="SalesOrderReportWeekHTML" type="birt" page="component://order/webapp/ordermgr/reports/SalesReportWeek.rptdesign" content-type="text/html"/>
-    <view-map name="SalesOrderReportMonthHTML" type="birt" page="component://order/webapp/ordermgr/reports/SalesReportMonth.rptdesign" content-type="text/html"/>
-    <view-map name="NetBeforeOverheadOrderReport" type="birt" page="component://order/webapp/ordermgr/reports/NetBeforeOverheadReport.rptdesign" content-type="application/pdf"/>
-    <view-map name="ProductDemandOrderReport" type="birt" page="component://order/webapp/ordermgr/reports/ProductDemandReport.rptdesign" content-type="application/pdf"/>
-    <view-map name="OrderByReferrerReport" type="birt" page="component://order/webapp/ordermgr/reports/OrderByReferrer.rptdesign" content-type="application/pdf"/>
-    <view-map name="OrdersByChannelReport" type="birt" page="component://order/webapp/ordermgr/reports/OrdersByChannel.rptdesign" content-type="application/pdf"/>
-    <view-map name="SaleOrderDiscountCodeReport" type="birt" page="component://order/webapp/ordermgr/reports/OrderDiscountCodeReport.rptdesign" content-type="application/pdf"/>
-    <view-map name="Last3MonthsSalesReport" type="birt" page="component://order/webapp/ordermgr/reports/Last3MonthsSalesReport.rptdesign" content-type="application/pdf"/>    
-    <view-map name="CouponSalesReport" type="birt" page="component://order/webapp/ordermgr/reports/CouponSalesReport.rptdesign" content-type="application/pdf"/>
+    <view-map name="SalesOrderReportPDF" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReport.rptdesign" content-type="application/pdf"/>
+    <view-map name="SalesOrderReportWeekPDF" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReportWeek.rptdesign" content-type="application/pdf"/>
+    <view-map name="SalesOrderReportMonthPDF" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReportMonth.rptdesign" content-type="application/pdf"/>
+    <view-map name="SalesOrderReportExcel" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReport.rptdesign" content-type="application/vnd.ms-excel"/>
+    <view-map name="SalesOrderReportWeekExcel" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReportWeek.rptdesign" content-type="application/vnd.ms-excel"/>
+    <view-map name="SalesOrderReportMonthExcel" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReportMonth.rptdesign" content-type="application/vnd.ms-excel"/>
+    <view-map name="SalesOrderReportHTML" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReport.rptdesign" content-type="text/html"/>
+    <view-map name="SalesOrderReportWeekHTML" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReportWeek.rptdesign" content-type="text/html"/>
+    <view-map name="SalesOrderReportMonthHTML" type="birt" page="component://order/webapp/purchasemgr/reports/SalesReportMonth.rptdesign" content-type="text/html"/>
+    <view-map name="NetBeforeOverheadOrderReport" type="birt" page="component://order/webapp/purchasemgr/reports/NetBeforeOverheadReport.rptdesign" content-type="application/pdf"/>
+    <view-map name="ProductDemandOrderReport" type="birt" page="component://order/webapp/purchasemgr/reports/ProductDemandReport.rptdesign" content-type="application/pdf"/>
+    <view-map name="OrderByReferrerReport" type="birt" page="component://order/webapp/purchasemgr/reports/OrderByReferrer.rptdesign" content-type="application/pdf"/>
+    <view-map name="OrdersByChannelReport" type="birt" page="component://order/webapp/purchasemgr/reports/OrdersByChannel.rptdesign" content-type="application/pdf"/>
+    <view-map name="SaleOrderDiscountCodeReport" type="birt" page="component://order/webapp/purchasemgr/reports/OrderDiscountCodeReport.rptdesign" content-type="application/pdf"/>
+    <view-map name="Last3MonthsSalesReport" type="birt" page="component://order/webapp/purchasemgr/reports/Last3MonthsSalesReport.rptdesign" content-type="application/pdf"/>    
+    <view-map name="CouponSalesReport" type="birt" page="component://order/webapp/purchasemgr/reports/CouponSalesReport.rptdesign" content-type="application/pdf"/>
 
-    <view-map name="FindRequirements" type="screen" page="component://order/widget/ordermgr/RequirementScreens.xml#FindRequirements"/>
-    <view-map name="EditRequirement" type="screen" page="component://order/widget/ordermgr/RequirementScreens.xml#EditRequirement"/>
-    <view-map name="ListRequirementCustRequests" type="screen" page="component://order/widget/ordermgr/RequirementScreens.xml#ListRequirementCustRequests"/>
-    <view-map name="ListRequirementOrders" type="screen" page="component://order/widget/ordermgr/RequirementScreens.xml#ListRequirementOrders"/>
-    <view-map name="ListRequirementRoles" type="screen" page="component://order/widget/ordermgr/RequirementScreens.xml#ListRequirementRoles"/>
-    <view-map name="EditRequirementRole" type="screen" page="component://order/widget/ordermgr/RequirementScreens.xml#EditRequirementRole"/>
-    <view-map name="ApproveRequirements" page="component://order/widget/ordermgr/RequirementScreens.xml#ApproveRequirements" type="screen"/>
-    <view-map name="ApprovedProductRequirements" page="component://order/widget/ordermgr/RequirementScreens.xml#ApprovedProductRequirements" type="screen"/>
-    <view-map name="ApprovedProductRequirementsReport" type="screenfop" page="component://order/widget/ordermgr/RequirementScreens.xml#ApprovedProductRequirementsReport" content-type="application/pdf" encoding="none"/>
-    <view-map name="ApprovedProductRequirementsByVendor" page="component://order/widget/ordermgr/RequirementScreens.xml#ApprovedProductRequirementsByVendor" type="screen"/>
-    <view-map name="ApprovedProductRequirementsByVendorReport" type="screenfop" page="component://order/widget/ordermgr/RequirementScreens.xml#ApprovedProductRequirementsByVendorReport" content-type="application/pdf" encoding="none"/>
-    <view-map name="RequirementsForSupplier" type="screen" page="component://order/widget/ordermgr/OrderEntryScreens.xml#RequirementsForSupplier"/>
-    <view-map name="FindQuoteForCart" type="screen" page="component://order/widget/ordermgr/OrderEntryScreens.xml#FindQuoteForCart"/>
+    <view-map name="FindRequirements" type="screen" page="component://order/widget/purchasemgr/RequirementScreens.xml#FindRequirements"/>
+    <view-map name="EditRequirement" type="screen" page="component://order/widget/purchasemgr/RequirementScreens.xml#EditRequirement"/>
+    <view-map name="ListRequirementCustRequests" type="screen" page="component://order/widget/purchasemgr/RequirementScreens.xml#ListRequirementCustRequests"/>
+    <view-map name="ListRequirementOrders" type="screen" page="component://order/widget/purchasemgr/RequirementScreens.xml#ListRequirementOrders"/>
+    <view-map name="ListRequirementRoles" type="screen" page="component://order/widget/purchasemgr/RequirementScreens.xml#ListRequirementRoles"/>
+    <view-map name="EditRequirementRole" type="screen" page="component://order/widget/purchasemgr/RequirementScreens.xml#EditRequirementRole"/>
+    <view-map name="ApproveRequirements" page="component://order/widget/purchasemgr/RequirementScreens.xml#ApproveRequirements" type="screen"/>
+    <view-map name="ApprovedProductRequirements" page="component://order/widget/purchasemgr/RequirementScreens.xml#ApprovedProductRequirements" type="screen"/>
+    <view-map name="ApprovedProductRequirementsReport" type="screenfop" page="component://order/widget/purchasemgr/RequirementScreens.xml#ApprovedProductRequirementsReport" content-type="application/pdf" encoding="none"/>
+    <view-map name="ApprovedProductRequirementsByVendor" page="component://order/widget/purchasemgr/RequirementScreens.xml#ApprovedProductRequirementsByVendor" type="screen"/>
+    <view-map name="ApprovedProductRequirementsByVendorReport" type="screenfop" page="component://order/widget/purchasemgr/RequirementScreens.xml#ApprovedProductRequirementsByVendorReport" content-type="application/pdf" encoding="none"/>
+    <view-map name="RequirementsForSupplier" type="screen" page="component://order/widget/purchasemgr/OrderEntryScreens.xml#RequirementsForSupplier"/>
+    <view-map name="FindQuoteForCart" type="screen" page="component://order/widget/purchasemgr/OrderEntryScreens.xml#FindQuoteForCart"/>
 
-    <view-map name="FindQuote" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#FindQuote"/>
-    <view-map name="ViewQuote" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ViewQuote"/>
-    <view-map name="QuoteReport" type="screenfop" page="component://order/widget/ordermgr/QuoteScreens.xml#QuoteReport" content-type="application/pdf" encoding="none"/>
-    <view-map name="EditQuote" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuote"/>
-    <view-map name="ListQuoteRoles" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteRoles"/>
-    <view-map name="EditQuoteRole" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteRole"/>
-    <view-map name="ListQuoteItems" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteItems"/>
-    <view-map name="EditQuoteItem" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteItem"/>
-    <view-map name="ListQuoteAttributes" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteAttributes"/>
-    <view-map name="EditQuoteAttribute" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteAttribute"/>
-    <view-map name="ListQuoteCoefficients" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteCoefficients"/>
-    <view-map name="EditQuoteCoefficient" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteCoefficient"/>
-    <view-map name="ManageQuotePrices" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ManageQuotePrices"/>
-    <view-map name="ListQuoteAdjustments" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteAdjustments"/>
-    <view-map name="EditQuoteAdjustment" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteAdjustment"/>
-    <view-map name="ViewQuoteProfit" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ViewQuoteProfit"/>
-    <view-map name="EditQuoteReportMail" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteReportMail"/>
-    <view-map name="createnewquotenote" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#QuoteNewNote"/>
-    <view-map name="ListQuoteNotes" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteNotes"/>
-    <view-map name="EditQuoteNote" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteNote"/>
+    <view-map name="FindQuote" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#FindQuote"/>
+    <view-map name="ViewQuote" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ViewQuote"/>
+    <view-map name="QuoteReport" type="screenfop" page="component://order/widget/purchasemgr/QuoteScreens.xml#QuoteReport" content-type="application/pdf" encoding="none"/>
+    <view-map name="EditQuote" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuote"/>
+    <view-map name="ListQuoteRoles" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteRoles"/>
+    <view-map name="EditQuoteRole" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteRole"/>
+    <view-map name="ListQuoteItems" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteItems"/>
+    <view-map name="EditQuoteItem" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteItem"/>
+    <view-map name="ListQuoteAttributes" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteAttributes"/>
+    <view-map name="EditQuoteAttribute" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteAttribute"/>
+    <view-map name="ListQuoteCoefficients" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteCoefficients"/>
+    <view-map name="EditQuoteCoefficient" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteCoefficient"/>
+    <view-map name="ManageQuotePrices" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ManageQuotePrices"/>
+    <view-map name="ListQuoteAdjustments" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteAdjustments"/>
+    <view-map name="EditQuoteAdjustment" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteAdjustment"/>
+    <view-map name="ViewQuoteProfit" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ViewQuoteProfit"/>
+    <view-map name="EditQuoteReportMail" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteReportMail"/>
+    <view-map name="createnewquotenote" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#QuoteNewNote"/>
+    <view-map name="ListQuoteNotes" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteNotes"/>
+    <view-map name="EditQuoteNote" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteNote"/>
 
-    <view-map name="FindRequest" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#FindRequest"/>
-    <view-map name="ViewRequest" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#ViewRequest"/>
-    <view-map name="EditRequest" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#EditRequest"/>
-    <view-map name="EditRequestCustomer" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#EditRequestCustomer"/>
-    <view-map name="EditRequestItem" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#EditRequestItem"/>
-    <view-map name="RequestItems" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#RequestItems"/>
-    <view-map name="RequestRoles" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#RequestRoles"/>
-    <view-map name="RequestItemNotes" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#RequestItemNotes"/>
-    <view-map name="RequestItemQuotes" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#RequestItemQuotes"/>
-    <view-map name="RequestItemRequirements" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#RequestItemRequirements"/>
-    <view-map name="EditRequestItemWorkEfforts" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#EditRequestItemWorkEfforts"/>
-    <view-map name="CreateQuoteAndQuoteItemForRequest" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#CreateQuoteAndQuoteItemForRequest"/>
-    <view-map name="EditQuoteItemForRequest" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#EditQuoteItemForRequest"/>
-    <view-map name="EditCustRequestContent" type="screen" page="component://order/widget/ordermgr/CustRequestScreens.xml#EditCustRequestContent"/>
+    <view-map name="FindRequest" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#FindRequest"/>
+    <view-map name="ViewRequest" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#ViewRequest"/>
+    <view-map name="EditRequest" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#EditRequest"/>
+    <view-map name="EditRequestCustomer" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#EditRequestCustomer"/>
+    <view-map name="EditRequestItem" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#EditRequestItem"/>
+    <view-map name="RequestItems" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#RequestItems"/>
+    <view-map name="RequestRoles" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#RequestRoles"/>
+    <view-map name="RequestItemNotes" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#RequestItemNotes"/>
+    <view-map name="RequestItemQuotes" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#RequestItemQuotes"/>
+    <view-map name="RequestItemRequirements" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#RequestItemRequirements"/>
+    <view-map name="EditRequestItemWorkEfforts" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#EditRequestItemWorkEfforts"/>
+    <view-map name="CreateQuoteAndQuoteItemForRequest" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#CreateQuoteAndQuoteItemForRequest"/>
+    <view-map name="EditQuoteItemForRequest" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#EditQuoteItemForRequest"/>
+    <view-map name="EditCustRequestContent" type="screen" page="component://order/widget/purchasemgr/CustRequestScreens.xml#EditCustRequestContent"/>
 
-    <view-map name="AddQuoteWorkEffort" type="screen" page="component://order/widget/ordermgr/QuoteWorkEffortScreens.xml#AddQuoteWorkEffort"/>
-    <view-map name="EditQuoteWorkEffort" type="screen" page="component://order/widget/ordermgr/QuoteWorkEffortScreens.xml#EditQuoteWorkEffort"/>
-    <view-map name="ListQuoteWorkEfforts" type="screen" page="component://order/widget/ordermgr/QuoteWorkEffortScreens.xml#ListQuoteWorkEfforts"/>
-    <view-map name="EditOrderHeader" type="screen" page="component://order/widget/ordermgr/OrderHeaderScreens.xml#EditOrderHeader"/>
-    <view-map name="ListOrderHeaders" type="screen" page="component://order/widget/ordermgr/OrderHeaderScreens.xml#ListOrderHeaders"/>
+    <view-map name="AddQuoteWorkEffort" type="screen" page="component://order/widget/purchasemgr/QuoteWorkEffortScreens.xml#AddQuoteWorkEffort"/>
+    <view-map name="EditQuoteWorkEffort" type="screen" page="component://order/widget/purchasemgr/QuoteWorkEffortScreens.xml#EditQuoteWorkEffort"/>
+    <view-map name="ListQuoteWorkEfforts" type="screen" page="component://order/widget/purchasemgr/QuoteWorkEffortScreens.xml#ListQuoteWorkEfforts"/>
+    <view-map name="EditOrderHeader" type="screen" page="component://order/widget/purchasemgr/OrderHeaderScreens.xml#EditOrderHeader"/>
+    <view-map name="ListOrderHeaders" type="screen" page="component://order/widget/purchasemgr/OrderHeaderScreens.xml#ListOrderHeaders"/>
 
     <view-map name="LookupPerson" type="screen" page="component://party/widget/partymgr/LookupScreens.xml#LookupPerson"/>
     <view-map name="LookupPartyGroup" type="screen" page="component://party/widget/partymgr/LookupScreens.xml#LookupPartyGroup"/>
@@ -2102,7 +2102,7 @@ under the License.
     <view-map name="LookupCustomerName" type="screen" page="component://party/widget/partymgr/LookupScreens.xml#LookupCustomerName"/>
     <view-map name="LookupProduct" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupProduct"/>
     <view-map name="LookupSupplierProduct" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupSupplierProduct"/>
-    <view-map name="LookupBulkAddSupplierProductsInApprovedOrder" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#LookupBulkAddSupplierProductsInApprovedOrder"/>
+    <view-map name="LookupBulkAddSupplierProductsInApprovedOrder" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#LookupBulkAddSupplierProductsInApprovedOrder"/>
     <view-map name="LookupProductAndPrice" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupProductAndPrice"/>
     <view-map name="LookupProductFeature" type="screen" page="component://product/widget/catalog/LookupScreens.xml#LookupProductFeature"/>
     <view-map name="LookupUserLoginAndPartyDetails" type="screen" page="component://party/widget/partymgr/LookupScreens.xml#LookupUserLoginAndPartyDetails"/>
@@ -2112,33 +2112,33 @@ under the License.
     <view-map name="LookupFacility" type="screen" page="component://product/widget/facility/LookupScreens.xml#LookupFacility"/>
     <view-map name="LookupFixedAsset" type="screen" page="component://accounting/widget/LookupScreens.xml#LookupFixedAsset"/>
 
-    <view-map name="LookupShoppingList" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupShoppingList"/>
-    <view-map name="LookupCustRequest" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupCustRequest"/>
-    <view-map name="LookupCustRequestItem" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupCustRequestItem"/>
-    <view-map name="LookupRequirement" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupRequirement"/>
-    <view-map name="LookupQuote" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupQuote"/>
-    <view-map name="LookupQuoteItem" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupQuoteItem"/>
-    <view-map name="LookupOrderHeader" type="screen" page="component://order/widget/ordermgr/LookupScreens.xml#LookupOrderHeader"/>
+    <view-map name="LookupShoppingList" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupShoppingList"/>
+    <view-map name="LookupCustRequest" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupCustRequest"/>
+    <view-map name="LookupCustRequestItem" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupCustRequestItem"/>
+    <view-map name="LookupRequirement" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupRequirement"/>
+    <view-map name="LookupQuote" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupQuote"/>
+    <view-map name="LookupQuoteItem" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupQuoteItem"/>
+    <view-map name="LookupOrderHeader" type="screen" page="component://order/widget/purchasemgr/LookupScreens.xml#LookupOrderHeader"/>
 
     <view-map name="LookupWorkEffort" type="screen" page="component://workeffort/widget/LookupScreens.xml#LookupWorkEffort"/>
-    <view-map name="LookupBulkAddProducts" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#LookupBulkAddProducts"/>
-    <view-map name="LookupBulkAddSupplierProducts" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#LookupBulkAddSupplierProducts"/>
+    <view-map name="LookupBulkAddProducts" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#LookupBulkAddProducts"/>
+    <view-map name="LookupBulkAddSupplierProducts" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#LookupBulkAddSupplierProducts"/>
     <view-map name="LookupContent" page="component://content/widget/content/ContentScreens.xml#LookupContent" type="screen"/>
-    <view-map name="LookupAssociatedProducts" type="screen" page="component://order/widget/ordermgr/OrderEntryCartScreens.xml#LookupAssociatedProducts"/>
+    <view-map name="LookupAssociatedProducts" type="screen" page="component://order/widget/purchasemgr/OrderEntryCartScreens.xml#LookupAssociatedProducts"/>
     <!-- PDFs  -->
-    <view-map name="OrderPDF" type="screenfop" page="component://order/widget/ordermgr/OrderPrintScreens.xml#OrderPDF" content-type="application/pdf" encoding="none"/>
-    <view-map name="ReturnPDF" type="screenfop" page="component://order/widget/ordermgr/OrderPrintScreens.xml#ReturnPDF" content-type="application/pdf" encoding="none"/>
-    <view-map name="ShipGroupsPDF" type="screenfop" page="component://order/widget/ordermgr/OrderPrintScreens.xml#ShipGroupsPDF" content-type="application/pdf" encoding="none"/>
+    <view-map name="OrderPDF" type="screenfop" page="component://order/widget/purchasemgr/OrderPrintScreens.xml#OrderPDF" content-type="application/pdf" encoding="none"/>
+    <view-map name="ReturnPDF" type="screenfop" page="component://order/widget/purchasemgr/OrderPrintScreens.xml#ReturnPDF" content-type="application/pdf" encoding="none"/>
+    <view-map name="ShipGroupsPDF" type="screenfop" page="component://order/widget/purchasemgr/OrderPrintScreens.xml#ShipGroupsPDF" content-type="application/pdf" encoding="none"/>
     <view-map name="OrderPickSheetPDF" type="screenfop" page="component://product/widget/facility/FacilityScreens.xml#PrintPickSheets.fo" content-type="application/pdf" encoding="none"/>
 
-    <view-map name="SendConfirmationMail" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#SendOrderConfirmation"/>
-    <view-map name="SendCompletionMail" type="screen" page="component://order/widget/ordermgr/OrderViewScreens.xml#SendOrderCompletion"/>
-    <view-map name="ReturnHistory" type="screen" page="component://order/widget/ordermgr/OrderReturnScreens.xml#OrderReturnHistory"/>
-    <view-map name="ProductUomDropDownOnly" type="screen" page="component://order/widget/ordermgr/OrderEntryCatalogScreens.xml#ProductUomDropDownOnly"/>
-    <view-map name="EditQuoteTerm" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteTerm"/>
-    <view-map name="EditQuoteTermItem" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#EditQuoteTermItem"/>
-    <view-map name="ListQuoteTerms" type="screen" page="component://order/widget/ordermgr/QuoteScreens.xml#ListQuoteTerms"/>
+    <view-map name="SendConfirmationMail" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#SendOrderConfirmation"/>
+    <view-map name="SendCompletionMail" type="screen" page="component://order/widget/purchasemgr/OrderViewScreens.xml#SendOrderCompletion"/>
+    <view-map name="ReturnHistory" type="screen" page="component://order/widget/purchasemgr/OrderReturnScreens.xml#OrderReturnHistory"/>
+    <view-map name="ProductUomDropDownOnly" type="screen" page="component://order/widget/purchasemgr/OrderEntryCatalogScreens.xml#ProductUomDropDownOnly"/>
+    <view-map name="EditQuoteTerm" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteTerm"/>
+    <view-map name="EditQuoteTermItem" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#EditQuoteTermItem"/>
+    <view-map name="ListQuoteTerms" type="screen" page="component://order/widget/purchasemgr/QuoteScreens.xml#ListQuoteTerms"/>
 
-    <view-map name="splitship" type="screen" page="component://order/widget/ordermgr/OrderEntryOrderScreens.xml#splitship"/>
+    <view-map name="splitship" type="screen" page="component://order/widget/purchasemgr/OrderEntryOrderScreens.xml#splitship"/>
     <!-- end of view mappings -->
 </site-conf>
